@@ -1,7 +1,9 @@
-REM image : 
-REM container :
-REM docker :
-REM build image|container  means -->
+REM image :  lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and configuration files
+REM container : image like class , container looks like an oblject from this class . we may have many containers from the same image , When you start a container 
+REM             from an image, Docker creates a writable container layer on top of the image's read-only layers. This writable layer allows the container to modify its filesystem during runtime, such as writing logs or storing data.
+REM docker file :  text document that contains instructions for building a Docker image. It specifies the base image, any dependencies, environment variables, and commands needed to create the image.
+REM build image
+
 
 REM building a docker image for this project and naming it as ml-docker-app  
 REM you should run docker engine first , before build
