@@ -3,15 +3,19 @@
 name: git actions   #name of this workflow
 on: push        # will be executed when pushing a commit
 
-jobs:   #should be stated
-    test_code:  #chose the name of the task
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Checkout the repository
+      - uses: actions/checkout@v4
 
-        runs-on: ubuntu-latest  #should be stated
-        steps:
-            - uses: actions/checkout@v4     # this copy your code into virtual machine and checkout to the branch
-            - uses: actions/setup-python@v5
-            with:
-                python-version: '3.12'
-                cache: 'pip' # caching pip dependencies
+      # Step 2: Set up Python version 3.12 and enable pip caching
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'  # Cache pip dependencies for faster builds
 
-            - run: pip install -r requirements.txt
+      # Step 3: Install dependencies from requirements.txt
+      - run: pip install -r requirements.txt
