@@ -1,5 +1,5 @@
 REM image :  lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and configuration files
-REM container : image like class , container looks like an oblject from this class . we may have many containers from the same image , When you start a container 
+REM container : image like class , container looks like an object from this class . we may have many containers from the same image , When you start a container 
 REM             from an image, Docker creates a writable container layer on top of the image's read-only layers. This writable layer allows the container to modify its filesystem during runtime, such as writing logs or storing data.
 REM docker file :  text document that contains instructions for building a Docker image. It specifies the base image, any dependencies, environment variables, and commands needed to create the image.
 REM volumes : Containers can use volumes to store data
@@ -7,7 +7,7 @@ REM volumes : Containers can use volumes to store data
 
 REM building a docker image for this project and naming it as ml-docker-app  
 REM you should run docker engine first , before build , we will see this image in docker desktop after running thios command , or run [docker images]
-docker build -t ml-docker-app .
+docker build -t 01111215596/docker_image  .
 
 REM run the image?
 docker run -it --rm ml-docker-app .
@@ -20,10 +20,10 @@ docker login
 
 REM Before you can push an image to Docker Hub, it must be tagged with your Docker Hub username. If you don’t tag it correctly, Docker will not know where to push the image.
 REM tag your docker image
-docker tag ml-docker-app osama/ml-docker-app
+docker tag ml-docker-app osama/osama_docker_repo
 
-REM To push the image to Docker Hub, use the docker push command followed by the name of the image you want to push:
-docker push osama/ml-docker-app
+REM To push the image to Docker Hub, use the docker push command followed by the name of the image you want to push|| because 01111215596 is my user name in dockerhup
+docker push 01111215596/docker_image 
 
 REM Check the Pushed Container Image on Docker Hub
 REM You can go to your Docker Hub repository and see the recently pushed image.
