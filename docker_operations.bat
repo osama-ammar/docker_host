@@ -6,11 +6,13 @@ REM volumes : Containers can use volumes to store data
 
 
 REM building a docker image for this project and naming it as ml-docker-app  
-REM you should run docker engine first , before build
+REM you should run docker engine first , before build , we will see this image in docker desktop after running thios command , or run [docker images]
 docker build -t ml-docker-app .
 
 REM run the image?
 docker run -it --rm ml-docker-app .
+docker run -p 5000:5000 ml-docker-app
+
 
 REM Once you have a Docker Hub account, you need to log in through the command line on your local machine. Open your terminal and run:
 docker login

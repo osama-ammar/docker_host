@@ -54,3 +54,7 @@ jobs:
     - name: Run testing
       run: |
             python -m unittest discover
+
+    - name: Building docker image
+      run : |
+            docker build -t ml-docker-app .
