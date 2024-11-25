@@ -4,7 +4,7 @@ from datetime import datetime
 import os
 
 # Import the train_model function
-from ..src import train_model
+from train_model import train_model
 
 """
 In Airflow, a DAG – or a Directed Acyclic Graph – 
@@ -19,8 +19,8 @@ I will start docker engine and pull airflow docker image
 
 
 default_args = {
-    'owner': 'airflow',
-    'start_date': datetime(2024, 11, 1),
+    'owner': 'osama',
+    'start_date': datetime(2024, 11, 3),
 }
 
 
@@ -33,3 +33,7 @@ with DAG('ml_model_training_dag', default_args=default_args, schedule_interval='
 
     # Specify task dependencies if needed
     train_task
+    
+    
+    
+    
