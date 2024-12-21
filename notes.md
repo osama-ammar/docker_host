@@ -9,7 +9,9 @@ we will need rhese at the samme directory:
 - docker file : The Dockerfile ensures that the required dependencies are baked into the image itself. This means every container started from the image will already have all the dependencies installed.
 - docker compose file: If you only use docker-compose.yaml and point to the base Airflow image (apache/airflow), it will not include extra libraries like scikit-learn. This is why you're getting errors like ModuleNotFoundError: No module named 'sklearn'
 
-
+Note
+======
+in the last run , the webserver was not running , I foun that port is used by abother process that i don/t know in this computer --> i get this process from task manager and ended it  , then rerun air flow again and it worked
 
 
 
