@@ -8,6 +8,7 @@ import joblib
 
 def train_model():
     # Load dataset
+    print("Training the model...")
     iris = datasets.load_iris()
     X = iris.data
     y = iris.target

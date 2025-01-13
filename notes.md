@@ -2,7 +2,8 @@ Airflow is a workflow management system that defines tasks and and their depende
   executes those tasks on a regular schedule, and distributes task execution across worker processes.
   Airflow offers an excellent UI that displays the states of currently active and past tasks, 
   shows diagnostic information about task execution, and allows the user to manually manage the execution and state of tasks.
-
+ - what happens when we run airflow ..... DAGs directory will be scanned to see tasks to be run ()
+ - the included tasks will be run as configured in dags files (ml-model-dag.py in my case)
 
 
 we will need these at the samme directory:

@@ -17,18 +17,18 @@ I will start docker engine and pull airflow docker image
 """
 
 
-
+# this task will start from the folwing date
 default_args = {
     'owner': 'osama',
     'start_date': datetime(2024, 11, 3),
 }
 
 
-#catchup=False: Disables catch-up, which means Airflow will not run past scheduled tasks if it has missed any due to downtime.
+#the following task will be run daily , catchup=False: Disables catch-up, which means Airflow will not run past scheduled tasks if it has missed any due to downtime.
 with DAG('ml_model_training_dag', default_args=default_args, schedule_interval='@daily', catchup=False) as dag:
     
     # Task to train the model
-    #the function train_model (imported earlier) should be called when this task runs.
+    # PythonOperator: allows you to define a task that runs a Python callable (function or method) when the task is triggered.
     train_task = PythonOperator(task_id='train_model',python_callable=train_model,)
 
     # Specify task dependencies if needed
