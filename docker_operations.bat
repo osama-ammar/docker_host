@@ -22,8 +22,8 @@ REM Before you can push an image to Docker Hub, it must be tagged with your Dock
 REM tag your docker image
 docker tag ml-docker-app osama/osama_docker_repo
 
-REM To push the image to Docker Hub, use the docker push command followed by the name of the image you want to push|| because 01111215596 is my user name in dockerhup
-docker push 01111215596/docker_image 
+REM To push the image to Docker Hub, use the docker push command followed by the name of the image you want to push|| because 01111215596 is my user name in dockerhup (remove below comment if you want)
+REM docker push 01111215596/docker_image 
 
 REM Check the Pushed Container Image on Docker Hub
 REM You can go to your Docker Hub repository and see the recently pushed image.
@@ -36,4 +36,7 @@ docker save my-image:latest > my-image.tar
 
 REM To use an exported image, run the docker load command. This accepts a tar archive produced by docker save as an input stream. Docker will load the archive's contents and add it to your list of local images.
 docker load < my-image.tar
+
+REM you can use docker compose file that contain many docker operations in one file then run the following at this file location
+docker-compose up --build -d
 
