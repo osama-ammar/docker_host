@@ -4,6 +4,8 @@ Airflow is a workflow management system that defines tasks and and their depende
   shows diagnostic information about task execution, and allows the user to manually manage the execution and state of tasks.
  - what happens when we run airflow ..... DAGs directory will be scanned to see tasks to be run ()
  - the included tasks will be run as configured in dags files (ml-model-dag.py in my case)
+ - in my case this task will run daily as long as docker container is runnning 
+ - to see the details of the task .. in airflow ui , click on the task .. click logs and you will see details
 
 
 we will need these at the samme directory:
