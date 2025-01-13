@@ -69,6 +69,6 @@ jobs:
 
 
 
-    - name: pushing docker image to dockers hup
-      run : |
-          docker push  01111215596/docker_image  
+    # - name: pushing docker image to dockers hup
+    #   run : |
+    #       docker push  01111215596/docker_image  
