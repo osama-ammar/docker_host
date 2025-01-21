@@ -11,8 +11,17 @@ WORKDIR /usr/src/app
 # Copy the current directory contents into the container at /usr/src/app
 COPY . .
 
-# Install any needed packages specified in requirements.txt
-RUN pip install --no-cache-dir -r requirements.txt
+# Install any needed packages specified in requirements.txt ...use   --no-cache-dir  for smaller size image (clearning cache)
+RUN pip install  -r requirements.txt    
 
-# Run app.py when the container launches #? executed when you run the container
-CMD ["python", "./sklearn_model.py"]
+# Expose port 5000
+EXPOSE 5000
+
+
+# Run sklearn_model.py (model_training) when the container launches #? executed when you run the container
+#CMD ["python", "./sklearn_model.py"]
+
+# model inference using flask (but you should have your model trained and saved in this dir )
+CMD ["python", "./model_api.py"]
+#when running the docker and api is working to accept request ...send this request :curl -X POST -H "Content-Type: application/json" -d "{\"features\": [5.1, 3.5, 1.4, 0.2]}" http://127.0.0.1:5000/predict
+# it will send you the answer
