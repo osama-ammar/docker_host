@@ -17,7 +17,7 @@ it has 2 main layers :
 - Ingress: Manages external HTTP/HTTPS traffic to services.
 - kubectl: Command-line tool to manage Kubernetes resources.
 
-#### WORKFLOW:
+#### WORKFLOW
 
 - when requests come , the service layer meet them , the scedulaer contribute request between pods using a load-balancing mechanism , when traffic exceed cabacity , new pods are created according a pre-defined autoscaling policy
 - Nodes are servers (or machines contain CPU , RAM , GPU ...) where work happens.
