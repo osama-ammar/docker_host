@@ -28,4 +28,5 @@ def predict():
     return jsonify({'prediction': int(prediction[0])})
 
 if __name__ == '__main__':
+    # exposing the model to be used (By specifying 0.0.0.0, the app listens for incoming requests from any IP address, enabling external devices (or Docker container ports) to connect.)
     app.run(host='0.0.0.0', port=5000)

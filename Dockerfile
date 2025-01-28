@@ -17,8 +17,7 @@ RUN pip install  -r requirements.txt
 # Expose port 5000
 EXPOSE 5000
 
-
-# Run sklearn_model.py (model_training) when the container launches #? executed when you run the container (if you used the next line to build an image for training , the model will not be saved locally bu inside the docker)
+# Training the model mode --> this Runs sklearn_model.py (model_training) when the container launches #? executed when you run the container (if you used the next line to build an image for training , the model will not be saved locally bu inside the docker)
 #CMD ["python", "./sklearn_model.py"]
 
 # model inference using flask (but you should have your model trained and saved in this dir )

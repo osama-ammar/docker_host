@@ -7,20 +7,42 @@
 - check logs in docker desktop to findout problems
 - to know running apps that uses specific port  ...run this in cmd [netstat -aon | findstr :8080]
 - most problem s I face are due to used ports by other applications .... so I changed port in docker compose file ....details of ports:
+
   """
   ports:
-
   - 8081:8080
-    """
-    8081 (Host Port):
+  """
 
+  8081 (Host Port):
   This is the port on your host machine (your computer) that will be used to access the service running inside the container.
   In this case, when you navigate to http://localhost:8081 on your browser, the request is forwarded to the container.
 
   8080 (Container Port):
-
   This is the port inside the Docker container that the service (Airflow webserver) listens to.
   The Airflow
+
+
+
+# model inference using docker
+in docker file : CMD ["python", "./model_api.py"]
+#when running the docker and api is working to accept request ...send this request :  
+and the server in the docker will send you the answer
+
+
+
+## Model deployment as a service
+### curl -X POST -H "Content-Type: application/json" -d "{\"features\": [7.1, 4.5, 0.4, 0.2]}" http://127.0.0.1:5000/predict
+Explanantion :
+curl      ---> amd tool to send requsts
+-X POST      ---> method will be used in this request (post for sending data..)
+-H "Content-Type: application/json"      ---> the header about  sent data (info about the nature of sent data , its type  , structure ....
+-d "{\"features\": [5.1, 3.5, 1.4, 0.2]}"      ---> the payload (data itself)
+http://127.0.0.1:5000/predict     ---> loacation where the request will be sent to (will be sent to [preict] end point using port (5000)
+
+             (( the port may have many end points looks like the port is the main door of a house(server app) and endpoints are rooms inside this house , each 
+               one have a functionality))
+
+
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
