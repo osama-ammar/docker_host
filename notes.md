@@ -81,10 +81,19 @@ it has 2 main layers :
 - Containerize: Create and test a Docker image with the model and API.
 - Set Up Cluster: Access a Kubernetes cluster and configure kubectl.
 - Write Configs: Define Deployment.yaml and Service.yaml YAML files.
-- Deploy: Apply YAML files to deploy the model.
+- Deploy: Apply YAML files to deploy the model.-->
 - Test: Access the service and test the API endpoint.
 - Scale: Monitor and adjust replicas as needed.
 - Automate: Use CI/CD and Helm for streamlined deployment.
+
+in code:  after having yor docker image and the ml model inside and it's working , ensure initializing kupernates in docker desktop ,then , configure deployment.yaml and service.yaml and ensure you put the rigtht name of your docker image in deployment.yaml , the applay the following commands 
+    [kubectl apply -f deployment.yaml]              ---> applying deplyment config
+    [kubectl apply -f service.yaml]                ---> applying service config
+    [kubectl get pods]                              --->  Lists all the pods in the cluster with their status, restart count, and age.
+    [kubectl get services]                            ---> Lists all services in the cluster with their type, IP, and exposed ports.
+    [kubectl port-forward svc/ml-app-service 5000:5000]     ---->  forwards port 5000 on your local machine to port 5000 on the ml-app-service service running in your Kubernetes cluster. This allows you to access the service locally via localhost:5000.
+
+you may try now to test the api by sending request to this port , und you shouls get a response and see logs in commmand line under last command run
 
 
 -----------------------------------------------------------------------------------------------------------------------------
