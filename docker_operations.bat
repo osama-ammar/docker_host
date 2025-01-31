@@ -1,3 +1,5 @@
+:: this file should build the docker image indicated in the Dockerfile.yaml and run tag , push , save the image i needed ... with some info about the process and basi concepts
+
 :: image :  lightweight, standalone, executable package that includes everything needed to run a piece of software, including the code, a runtime, libraries, environment variables, and configuration files
 :: container : image like class , container looks like an oblject from this class . we may have many containers from the same image , When you start a container 
 ::             from an image, Docker creates a writable container layer on top of the image's read-only layers. This writable layer allows the container to modify its filesystem during runtime, such as writing logs or storing data.
@@ -9,6 +11,7 @@ set IMAGE_NAME= ml-docker-app
 set PORT=5000
 set MODE= train
 set WORKDIR =  /usr/src/app
+
 :: building a docker image for this project and naming it as  %IMAGE_NAME%  
 :: you should run docker engine first , before build
 docker build -t  %IMAGE_NAME% .
