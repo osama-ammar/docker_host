@@ -1,7 +1,8 @@
 __pycache__/
 *.py[cod]
 *$py.class
-**/logs/
+*.tar
+*.rar
 # C extensions
 *.so
 
