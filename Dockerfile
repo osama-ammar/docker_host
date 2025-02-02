@@ -21,6 +21,6 @@ EXPOSE 5000
 #CMD ["python", "./train_model.py"]
 
 # model inference using flask (but you should have your model trained and saved in this dir )
-CMD ["python", "./model_api.py"]
+CMD ["python", "./model_inference.py"]
 #when running the docker and api is working to accept request ...send this request :curl -X POST -H "Content-Type: application/json" -d "{\"features\": [5.1, 3.5, 1.4, 0.2]}" http://127.0.0.1:5000/predict
 # it will send you the answer

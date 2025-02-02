@@ -24,7 +24,7 @@
 
 
 # model inference using docker
-in docker file : CMD ["python", "./model_api.py"]
+in docker file : CMD ["python", "./model_inference.py"]
 #when running the docker and api is working to accept request ...send this request :  
 and the server in the docker will send you the answer
 
