@@ -30,7 +30,7 @@ docker-compose up airflow-init
 echo Starting Airflow services...
 docker-compose up -d
 
-echo Airflow setup completed. You can access the Airflow web interface at http://localhost:8180 or better enter from docker desktop
+echo Airflow setup completed. You can access the Airflow web interface at http://localhost:8081/home or better enter from docker desktop
 echo Use username 'airflow' and password 'airflow' to log in.
 
 :: Step 6: Provide final instructions
