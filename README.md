@@ -4,26 +4,15 @@
 - [x] using Githup actions
 - [ ] using kupernates
 
-### Data pipelines
+### Data pipelines (Airflow)
 - [x] setup airflow
 - [x] working wth train model
-- [/] understanding triggers
+- [x] understanding triggers
+- [ ] using airflow with docker operators to trigger (using 2 DAGs) training and inference of the model 
 
 ### Kupernates
 - [x] setup Kupernates
 - [/] using the model in kupernates
-## Complete CI/CD Cycle (CI/CD/Dockers/Airflow)
-
-- [X] Containerizing with Docker
-- [X] using Githup actions
-- [ ] using kupernates
-
-### Data pipelines
-
-- [X] setup airflow
-- [X] working wth train model
-
-- [/] understanding triggers
 
 ### Security
 
