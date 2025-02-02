@@ -109,3 +109,6 @@ you may try now to test the api by sending request to this port , und you shouls
 - to see the details of the task .. in airflow ui , click on the task .. click logs and you will see details we will need these at the samme directory:
 - docker file : The Dockerfile ensures that the required dependencies are baked into the image itself. This means every container started from the image will already have all the dependencies installed.
 - docker compose file: If you only use docker-compose.yaml and point to the base Airflow image (apache/airflow), it will not include extra libraries like scikit-learn. This is why you're getting errors like ModuleNotFoundError: No module named 'sklearn'
+
+
+

@@ -1,0 +1,4 @@
+# to ignore non necessary files and folders when building the image
+airflow/
+dags/
+.github/

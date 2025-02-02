@@ -40,3 +40,6 @@ docker run -p %PORT%:%PORT%  %IMAGE_NAME%
 :: To use an exported image, run the docker load command. This accepts a tar archive produced by docker save as an input stream. Docker will load the archive's contents and add it to your list of local images.
 @REM docker load <  %IMAGE_NAME%.tar
 
+REM you can use docker compose file that contain many docker operations in one file then run the following at this file location
+docker-compose up --build -d
+
